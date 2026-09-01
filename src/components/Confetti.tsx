@@ -30,7 +30,7 @@ export function Confetti({ burstKey, count = 70 }: { burstKey: number; count?: n
       dx: (Math.random() - 0.5) * 160,
       delay: Math.random() * 0.5,
       duration: 2.2 + Math.random() * 1.8,
-      color: COLORS[i % COLORS.length],
+      color: COLORS[i % COLORS.length] ?? "var(--rose)",
       size: 6 + Math.random() * 8,
       round: Math.random() > 0.6,
     }));
