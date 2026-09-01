@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
           "Unfold flaps, take the Chotuu Test, press the button you shouldn't press, and open the secret envelope.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_income" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: CardExperience,
@@ -499,6 +499,7 @@ function CardExperience() {
       );
       return () => clearTimeout(t);
     }
+    return undefined;
   }, [stage]);
 
   const next = () => setStage((s) => s + 1);
